@@ -1,0 +1,28 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Camiseta</th>
+            <th>Equipo</th>
+            <th>Modelo</th>
+            <th>Precio</th>
+            <th>Disponibles</th>
+            <th>Comprar</th>
+        </tr>
+    </thead>
+     <tbody>
+        <tr *ngFor="let shirt of shirts" [ngClass]= "{'offer': shirt.offer}" >
+            <td><a href=""><img [src]=shirt.photo alt="" width="100" height="100" ></a></td>
+            <td>{{shirt.name}}</td> 
+            <td>{{shirt.model}}</td>  
+            <td>{{shirt.price | currency}}</td>  
+            <td><span *ngIf='shirt.stock==0 ' class="badge badge-danger">AGOTADO</span></td>  
+            <td>
+                <div class="row">
+                    <button class='btn btn-primary btn-sm' (click)="subtractCant(shirt)">-</button> 
+                    <input type='text' class="w-50" id ='cantidad' [(ngModel)]='shirt.cant' (keyup)='onChangeCant($event , shirt)'>
+                    <button class='btn btn-primary btn-sm' (click)='addCant(shirt)'>+</button>
+                </div>
+            </td>
+        </tr>        
+    </tbody>         
+</table>
