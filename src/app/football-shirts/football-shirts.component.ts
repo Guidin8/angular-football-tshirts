@@ -13,7 +13,7 @@ export class FootballShirtsComponent implements OnInit {
       model: 1986,
       price: 2000,
       stock: 10,
-      photo: "../assets/img/napoli1986.jpg",
+      photo: "./assets/img/napoli1986.jpg",
       offer: true,
       cant: 0
     },
@@ -22,7 +22,7 @@ export class FootballShirtsComponent implements OnInit {
       model: 2019,
       price: 2100,
       stock: 8,
-      photo: "../assets/img/fiorentina2019.jpg",
+      photo: "./assets/img/fiorentina2019.jpg",
       offer: true,
       cant: 0
     },
@@ -31,7 +31,7 @@ export class FootballShirtsComponent implements OnInit {
       model: 1960,
       price: 1900,
       stock: 5,
-      photo: "../assets/img/milan1960.jpg",
+      photo: "./assets/img/milan1960.jpg",
       offer: false,
       cant: 0
     },
@@ -40,7 +40,7 @@ export class FootballShirtsComponent implements OnInit {
       model: 1989,
       price: 1770,
       stock: 0,
-      photo: "../assets/img/inter1989.jpg",
+      photo: "./assets/img/inter1989.jpg",
       offer: false,
       cant: 0
     }
